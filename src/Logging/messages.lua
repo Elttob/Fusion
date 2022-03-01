@@ -5,13 +5,14 @@
 ]]
 
 return {
+	ambiguousParent = "The Parent of '%s' is ambiguous - only one Parent or [Children] is allowed at a time.",
 	applyPropsNilRef = "`applyInstanceProps` got a nil ref! (this is an internal issue)",
 	cannotAssignProperty = "The class type '%s' has no assignable property '%s'.",
 	cannotConnectChange = "The %s class doesn't have a property called '%s'.",
 	cannotConnectEvent = "The %s class doesn't have an event called '%s'.",
 	cannotCreateClass = "Can't create a new instance of class '%s'.",
 	computedCallbackError = "Computed callback error: ERROR_MESSAGE",
-	duplicatePropertyKey = "",
+	duplicatePropertyKey = "Can't assign to '%s' twice.",
 	invalidChangeHandler = "The change handler for the '%s' property must be a function.",
 	invalidEventHandler = "The handler for the '%s' event must be a function.",
 	invalidPropertyType = "'%s.%s' expected a '%s' type, but got a '%s' type.",
