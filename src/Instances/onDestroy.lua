@@ -14,8 +14,8 @@
 ]]
 
 local Package = script.Parent.Parent
-local PubTypes = require(Package.PubTypes)
-local logWarn = require(Package.Logging.logWarn)
+local PubTypes = require(Package.Instances.PubTypes)
+local logWarn = require(Package.Core.Logging.logWarn)
 local isAccessible = require(Package.Instances.isAccessible)
 
 -- FIXME: whenever they fix generic type packs in Roblox LSP:

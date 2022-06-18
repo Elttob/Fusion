@@ -6,8 +6,8 @@
 ]]
 
 local Package = script.Parent.Parent
-local PubTypes = require(Package.PubTypes)
-local logError = require(Package.Logging.logError)
+local PubTypes = require(Package.Instances.PubTypes)
+local logError = require(Package.Core.Logging.logError)
 
 local function OnChange(propertyName: string): PubTypes.SpecialKey
 	local changeKey = {}

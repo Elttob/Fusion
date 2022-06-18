@@ -1,7 +1,7 @@
 local Package = game:GetService("ReplicatedStorage").Fusion
 local New = require(Package.Instances.New)
 local Ref = require(Package.Instances.Ref)
-local Value = require(Package.State.Value)
+local Value = require(Package.Core.Value)
 
 local waitForGC = require(script.Parent.Parent.Utility.waitForGC)
 
@@ -29,7 +29,7 @@ return function()
 		waitForGC()
 		-- Wait twice in case the Value keeps the instance an extra cycle
 		waitForGC()
-		
+
 		expect(ref[1]).to.equal(nil)
 	end)
 end
