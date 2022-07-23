@@ -16,6 +16,7 @@ export type ForPairs<KO, VO> = PubTypes.ForPairs<KO, VO>
 export type ForKeys<KI, KO> = PubTypes.ForKeys<KI, KO>
 export type ForValues<VI, VO> = PubTypes.ForKeys<VI, VO>
 export type Observer = PubTypes.Observer
+export type Delay<T> = PubTypes.Delay<T>
 export type Tween<T> = PubTypes.Tween<T>
 export type Spring<T> = PubTypes.Spring<T>
 
@@ -37,6 +38,7 @@ type Fusion = {
 	ForKeys: <KI, KO, M>(inputTable: CanBeState<{[KI]: any}>, processor: (KI) -> (KO, M?), destructor: (KO, M?) -> ()?) -> ForKeys<KO, any>,
 	ForValues: <VI, VO, M>(inputTable: CanBeState<{[any]: VI}>, processor: (VI) -> (VO, M?), destructor: (VO, M?) -> ()?) -> ForValues<any, VO>,
 	Observer: (watchedState: StateObject<any>) -> Observer,
+  Delay: <T>(valueState: StateObject<T>, delayDuration: number) -> Delay<T>,
 
 	Tween: <T>(goalState: StateObject<T>, tweenInfo: TweenInfo?) -> Tween<T>,
 	Spring: <T>(goalState: StateObject<T>, speed: number?, damping: number?) -> Spring<T>
@@ -60,6 +62,7 @@ return restrictRead("Fusion", {
 	ForKeys = require(script.State.ForKeys),
 	ForValues = require(script.State.ForValues),
 	Observer = require(script.State.Observer),
+  Delay = require(script.State.Delay),
 
 	Tween = require(script.Animation.Tween),
 	Spring = require(script.Animation.Spring)
